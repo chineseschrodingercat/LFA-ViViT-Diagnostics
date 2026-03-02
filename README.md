@@ -1,5 +1,8 @@
 # AI-Enhanced Kinetic Lateral Flow Assay (LFA) Platform
 
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+
 ## Overview
 This repository hosts the deep learning framework for a next-generation **Digital Point-of-Care Testing (POCT)** system. Unlike traditional LFA readers that rely on static end-point imaging, this system utilizes a **Video Vision Transformer (ViViT)** to analyze the full kinetic reaction profile of the assay.
 
@@ -10,6 +13,14 @@ By capturing temporal features of the fluid dynamics, our model achieves superio
 * **Robust Data Loading**: Custom `VideoClassificationDataset` handling temporal sampling, prefix alignment, and corrupted frame fallback.
 * **High Precision**: Achieved **100% Accuracy** (on validation set) for distinguishing critical concentration cutoffs.
 * **Hardware Optimized**: Designed to work with low-resolution inputs from embedded camera modules (Raspberry Pi HQ Camera).
+
+## 🧠 Model Architecture
+
+<p align="center">
+  <img src="asset/model_architecture.png" width="85%">
+</p>
+
+*Figure 1: High-level architecture of the proposed system. We utilize a **ResNet-18** backbone for spatial feature extraction on each frame, followed by a **Transformer Encoder** to capture temporal dependencies across the reaction timeline.*
 
 ## Project Structure
 * `dataset.py`: Custom PyTorch Dataset class with OpenCV-based video processing and temporal sampling logic.
