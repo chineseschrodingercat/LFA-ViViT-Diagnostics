@@ -23,3 +23,15 @@ By capturing temporal features of the fluid dynamics, our model achieves superio
 ## Installation
 ```bash
 pip install -r requirements.txt
+```
+
+## Usage
+To train the model on a new dataset:
+```bash
+python train.py
+```
+
+To run inference using trained weights:
+```bash
+python inference.py --weights checkpoints/best_model.pth --test_dir ./data/test
+```
