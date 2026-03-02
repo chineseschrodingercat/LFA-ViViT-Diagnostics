@@ -18,8 +18,9 @@ By capturing temporal features of the fluid dynamics, our model achieves superio
 
 ## Contributors
 * **Minhao Liu** (Project Lead): Experimental design, hardware integration (Raspberry Pi/Microfluidics), T/C ratio algorithm, and system validation.
-* **Pu Sun** (Model Architect): Implementation of the ViViT architecture, hyperparameter optimization, and training pipeline deployment.
-
+* **Pu Sun** (Model Architect): Implementation of the ViViT architecture, core network design, and customized attention mechanisms.
+* **Zhugang Liu** (Optimization Specialist): Orchestrated the model training lifecycle, conducting extensive hyperparameter tuning and ablation studies to ensure optimal convergence and stability on the validation set.
+  
 ## Installation
 ```bash
 pip install -r requirements.txt
